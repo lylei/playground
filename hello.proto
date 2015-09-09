@@ -1,0 +1,16 @@
+package sofa.pbrpc.Liyuan;
+option cc_generic_services = true;
+
+message QARequest {
+    optional string name = 1;
+    optional string question = 2;
+}
+
+message QAResponse {
+    optional string name = 1;
+    optional string answer = 2;
+}
+
+service ServiceMachine {
+    rpc AskQuestion(QARequest) returns(QAResponse);
+}
